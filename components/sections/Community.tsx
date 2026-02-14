@@ -1,56 +1,41 @@
 "use client";
 
-import Section from "@/components/ui/Section";
-import CardGrid from "@/components/ui/CardGrid";
-import { Users, MessageCircle, Radio, Image, UserPlus, GraduationCap, Heart, Compass } from "lucide-react";
+import ImageTextSection from "@/components/ui/ImageTextSection";
+import { Users, MessageCircle, Heart, Trophy } from "lucide-react";
 
 export default function Community() {
-    const items = [
-        {
-            icon: Compass,
-            title: "City Hubs",
-            desc: "Join your local city hub to discover nearby rides, events, and fellow riders. Connect with your local biking community."
-        },
+    const features = [
         {
             icon: Users,
-            title: "Interest-Based Groups",
-            desc: "Find groups for touring, off-roading, track days, city riding, or bike-specific communities. Ride with people who share your passion."
+            title: "Connect with Fellow Riders",
+            desc: "Follow riders, build your network, and discover local communities. Find riding buddies who match your style and interests."
         },
         {
             icon: MessageCircle,
-            title: "Ride-Based Chat Rooms",
-            desc: "Auto-created group chats for every ride. Plan routes, share updates, and stay connected before, during, and after rides."
-        },
-        {
-            icon: Radio,
-            title: "Voice Rooms for Planning",
-            desc: "Live voice channels for group ride planning and real-time coordination. Discuss routes, stops, and logistics together."
-        },
-        {
-            icon: Image,
-            title: "Photo & Story Sharing",
-            desc: "Share ride photos, stories, and epic moments with the community. Relive adventures and inspire fellow riders."
+            title: "Forums & Group Chats",
+            desc: "Join topic-based discussions, city-specific groups, and bike model communities. Share tips, stories, and advice with passionate riders."
         },
         {
             icon: Heart,
-            title: "Kudos & Engagement",
-            desc: "Like, comment, and celebrate fellow riders' achievements. Build connections through positive community engagement."
+            title: "Events & Meetups",
+            desc: "Discover local bike nights, charity rides, and community events. Organize meetups and build lasting friendships beyond the road."
         },
         {
-            icon: UserPlus,
-            title: "Follow Riders & Organizers",
-            desc: "Follow your favorite ride organizers, tour guides, and fellow riders. Stay updated on their latest rides and adventures."
-        },
-        {
-            icon: GraduationCap,
-            title: "Mentorship Channels",
-            desc: "Beginner riders connect with experienced mentors. Learn riding techniques, safety tips, and get guidance from pros."
+            icon: Trophy,
+            title: "Achievements & Recognition",
+            desc: "Earn badges for milestones, participate in challenges, and climb leaderboards. Celebrate your riding journey with the community."
         }
     ];
 
     return (
-        <Section title="Community & Social Layer" id="community">
-            <CardGrid items={items} />
-        </Section>
+        <ImageTextSection
+            id="community"
+            title="More Than Riders. We're Family."
+            description="RideNex isn't just an app — it's a global community of passionate riders. Connect, share, and grow together. From local meetups to international friendships, find your tribe on two wheels."
+            imageSrc="/images/community-meetup.png"
+            imageAlt="Diverse group of riders at community meetup"
+            features={features}
+            imagePosition="right"
+        />
     );
 }

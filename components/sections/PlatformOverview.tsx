@@ -1,56 +1,41 @@
 "use client";
 
-import Section from "@/components/ui/Section";
-import CardGrid from "@/components/ui/CardGrid";
-import { Users, Globe, Cpu, BarChart3 } from "lucide-react";
+import ImageTextSection from "@/components/ui/ImageTextSection";
+import { Users, Globe, Cpu, Shield } from "lucide-react";
 
 export default function PlatformOverview() {
-    const items = [
-        {
-            icon: Users,
-            title: "Multi-Channel Onboarding",
-            desc: "Sign up via phone, email, or social login with OTP verification. Quick, secure, and seamless account creation in under 2 minutes."
-        },
+    const features = [
         {
             icon: Users,
             title: "Comprehensive Biker Profiles",
-            desc: "Showcase your experience level (Beginner/Intermediate/Pro), bike details (brand, model, year, CC, mods), riding interests, and bio. Build your digital riding identity."
+            desc: "Showcase your experience level, bike details, riding interests, and build your digital riding identity in minutes."
         },
         {
             icon: Globe,
             title: "City-Based Personalization",
-            desc: "Select primary and secondary cities to discover localized rides, tours, mechanics, and communities. Your riding world, tailored to your location."
+            desc: "Discover localized rides, tours, mechanics, and communities tailored to your primary and secondary cities."
         },
         {
             icon: Cpu,
-            title: "Unified Biker Operating System",
-            desc: "Everything from local rides to international tours, maintenance to marketplace, tracking to safety — all managed in one seamless platform."
+            title: "Unified Operating System",
+            desc: "Everything from rides to tours, maintenance to marketplace, tracking to safety — all in one seamless platform."
         },
         {
-            icon: BarChart3,
-            title: "Trust & Verification System",
-            desc: "KYC verification for hosts, bike ownership verification, verified badges for guides and mechanics. Ride with confidence in a trusted community."
-        },
-        {
-            icon: Users,
-            title: "Privacy & Visibility Controls",
-            desc: "Choose who sees your profile and activity — public, friends only, or private. Full control over your digital presence and riding data."
-        },
-        {
-            icon: Globe,
-            title: "Emergency Contact Integration",
-            desc: "Add emergency contacts who get auto-alerts during rides. Safety preferences built into your profile for peace of mind on every journey."
-        },
-        {
-            icon: Cpu,
-            title: "Bike Details & Modifications",
-            desc: "Document your bike's specs, modifications, and upgrades. Track your machine's evolution and connect with riders who share your passion."
+            icon: Shield,
+            title: "Trust & Verification",
+            desc: "KYC verification for hosts, verified badges for guides and mechanics. Ride with confidence in a trusted community."
         }
     ];
 
     return (
-        <Section title="One Platform. Entire Biker Ecosystem." id="platform">
-            <CardGrid items={items} />
-        </Section>
+        <ImageTextSection
+            id="platform"
+            title="One Platform. Entire Biker Ecosystem."
+            description="RideNex is your complete biker operating system — unifying rides, community, tracking, services, marketplace, and safety into one seamless digital experience built for modern riders."
+            imageSrc="/images/app-dashboard.png"
+            imageAlt="RideNex App Dashboard"
+            features={features}
+            imagePosition="right"
+        />
     );
 }

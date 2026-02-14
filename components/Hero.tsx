@@ -5,7 +5,19 @@ import { Sparkles } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section className="relative px-6 md:px-10 py-32 md:py-40 lg:py-48 text-center max-w-6xl mx-auto">
+        <section className="relative px-6 md:px-10 py-32 md:py-40 lg:py-48 text-center max-w-6xl mx-auto overflow-hidden">
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 -z-10">
+                <div
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                    style={{ backgroundImage: "url('/images/hero-bg.png')" }}
+                />
+                {/* Dark overlay for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black" />
+                {/* Animated gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse-slow" />
+            </div>
+
             {/* Floating particles effect */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 {[...Array(20)].map((_, i) => (
